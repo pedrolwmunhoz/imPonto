@@ -4,7 +4,7 @@ import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 
 @Repository
-public class FuncionarioDAO {
+public class FuncionarioDao {
 
     @PersistenceContext
     private EntityManager entityManager;

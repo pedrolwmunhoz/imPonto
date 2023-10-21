@@ -5,26 +5,26 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/funcionarios")
 public class FuncionarioController {
 
-    private final FuncionarioDAO funcionarioDAO;
+    private final FuncionarioDao funcionarioDao;
 
     @Autowired
-    public FuncionarioController(FuncionarioDAO funcionarioDAO) {
-        this.funcionarioDAO = funcionarioDAO;
+    public FuncionarioController(FuncionarioDao funcionarioDao) {
+        this.funcionarioDao = funcionarioDao;
     }
 
     @PostMapping
     public void inserirFuncionario(@RequestBody Funcionario funcionario) {
-        funcionarioDAO.inserirFuncionario(funcionario);
+        funcionarioDao.inserirFuncionario(funcionario);
     }
 
     @GetMapping("/{id}")
     public Funcionario consultarFuncionario(@PathVariable Long id) {
-        return funcionarioDAO.consultarFuncionario(id);
+        return funcionarioDao.consultarFuncionario(id);
     }
 
     @PutMapping("/{id}")
     public Funcionario atualizarFuncionario(@PathVariable Long id, @RequestBody Funcionario funcionario) {
         funcionario.setIdFuncionario(id);
-        return funcionarioDAO.atualizarFuncionario(funcionario);
+        return funcionarioDao.atualizarFuncionario(funcionario);
     }
 }

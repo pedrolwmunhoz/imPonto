@@ -30,11 +30,15 @@ public class Funcionario {
         // Construtor vazio padrão
     }
 
-    public Funcionario(String nomeFuncionario, Long idEmpresa, Long idHistoricoMarcacaoPonto, Long idObra) {
+    public Funcionario(Long idFuncionario, String nomeFuncionario, Long idEmpresa, Long idHistoricoMarcacaoPonto, Long idObra) {
         this.nomeFuncionario = nomeFuncionario;
         this.idEmpresa = idEmpresa;
         this.idHistoricoMarcacaoPonto = idHistoricoMarcacaoPonto;
         this.idObra = idObra;
+    }
+
+    public void setIdFuncionario(Long idFuncionario) {
+        this.idFuncionario = idFuncionario;
     }
 
     public Long getIdFuncionario() {

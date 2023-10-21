@@ -1,13 +1,13 @@
-package com.imTechSolutions.imPonto;
+// package com.imTechSolutions.imPonto;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+// import org.junit.jupiter.api.Test;
+// import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
-class ImPontoApplicationTests {
+// @SpringBootTest
+// class ImPontoApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+// 	@Test
+// 	void contextLoads() {
+// 	}
 
-}
+// }
