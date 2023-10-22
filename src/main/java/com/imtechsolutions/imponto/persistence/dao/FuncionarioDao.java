@@ -1,7 +1,10 @@
+package com.imtechsolutions.imponto.persistence.dao;
+
 import org.springframework.stereotype.Repository;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
+import com.imtechsolutions.imponto.persistence.models.Funcionario;
 
 @Repository
 public class FuncionarioDao {

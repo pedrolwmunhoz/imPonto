@@ -1,3 +1,7 @@
+package com.imtechsolutions.imponto.controller;
+import com.imtechsolutions.imponto.persistence.dao.FuncionarioDao;
+import com.imtechsolutions.imponto.persistence.models.Funcionario;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

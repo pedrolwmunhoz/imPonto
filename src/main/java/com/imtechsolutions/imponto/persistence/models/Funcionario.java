@@ -1,3 +1,5 @@
+package com.imtechsolutions.imponto.persistence.models;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.GeneratedValue;
@@ -6,7 +8,7 @@ import javax.persistence.Column;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "funcionarios", schema = "impontodb")
+@Table(name = "funcionarios", schema = "impontodtb")
 public class Funcionario {
 
     @Id
