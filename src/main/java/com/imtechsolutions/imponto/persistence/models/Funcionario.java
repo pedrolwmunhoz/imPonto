@@ -7,8 +7,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Column;
 import javax.persistence.Table;
 
-@Entity
+
 @Table(name = "funcionarios", schema = "impontodtb")
+@Entity
 public class Funcionario {
 
     @Id

@@ -3,6 +3,7 @@ package com.imtechsolutions.imponto.persistence.dao;
 import org.springframework.stereotype.Repository;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.PersistenceException;
 import javax.transaction.Transactional;
 import com.imtechsolutions.imponto.persistence.models.Funcionario;
 
@@ -13,8 +14,14 @@ public class FuncionarioDao {
     private EntityManager entityManager;
 
     @Transactional
-    public void inserirFuncionario(Funcionario funcionario) {
-        entityManager.persist(funcionario);
+    public String inserirFuncionario(Funcionario funcionario) {
+        try{
+            entityManager.persist(funcionario);
+            return "Deu";
+        } catch(PersistenceException e) {
+            return "erro insercao";
+        }
+   
     }
 
     public Funcionario consultarFuncionario(Long id) {
