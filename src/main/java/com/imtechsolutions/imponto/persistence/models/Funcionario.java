@@ -8,43 +8,50 @@ import javax.persistence.Column;
 import javax.persistence.Table;
 
 
-@Table(name = "funcionarios", schema = "impontodtb")
+@Table(name = "funcionarios", schema = "impontodb")
 @Entity
 public class Funcionario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_funcionario")
-    private Long idFuncionario;
+    private int idFuncionario;
+
+    @Column(name = "senha")
+    private String senhaFuncionario;
+
+    // @Id
+    // @Column(name = "cpf_funcionario")
+    // private String cpfFuncionario;
 
     @Column(name = "nomeFuncionario")
     private String nomeFuncionario;
 
     @Column(name = "id_empresa")
-    private Long idEmpresa;
+    private int idEmpresa;
 
     @Column(name = "id_historico_marcacao_ponto")
-    private Long idHistoricoMarcacaoPonto;
+    private int idHistoricoMarcacaoPonto;
 
     @Column(name = "id_obra")
-    private Long idObra;
+    private int idObra;
 
     public Funcionario() {
         // Construtor vazio padrão
     }
 
-    public Funcionario(Long idFuncionario, String nomeFuncionario, Long idEmpresa, Long idHistoricoMarcacaoPonto, Long idObra) {
+    public Funcionario(int idFuncionario, String nomeFuncionario, int idEmpresa, int idHistoricoMarcacaoPonto, int idObra) {
         this.nomeFuncionario = nomeFuncionario;
         this.idEmpresa = idEmpresa;
         this.idHistoricoMarcacaoPonto = idHistoricoMarcacaoPonto;
         this.idObra = idObra;
     }
 
-    public void setIdFuncionario(Long idFuncionario) {
+    public void setIdFuncionario(int idFuncionario) {
         this.idFuncionario = idFuncionario;
     }
 
-    public Long getIdFuncionario() {
+    public int getIdFuncionario() {
         return idFuncionario;
     }
 
@@ -55,28 +62,43 @@ public class Funcionario {
     public void setNomeFuncionario(String nomeFuncionario) {
         this.nomeFuncionario = nomeFuncionario;
     }
+    public String getSenhaFuncionario() {
+        return senhaFuncionario;
+    }
+    
+    public void setSenhaFuncionario(String senhaFuncionario) {
+        this.senhaFuncionario = senhaFuncionario;
+    }
 
-    public Long getIdEmpresa() {
+    // public String getCpfFuncionario() {
+    //     return cpfFuncionario;
+    // }
+    
+    // public void setCpfFuncionario(String cpfFuncionario) {
+    //     this.cpfFuncionario = cpfFuncionario;
+    // }
+
+    public int getIdEmpresa() {
         return idEmpresa;
     }
 
-    public void setIdEmpresa(Long idEmpresa) {
+    public void setIdEmpresa(int idEmpresa) {
         this.idEmpresa = idEmpresa;
     }
 
-    public Long getIdHistoricoMarcacaoPonto() {
+    public int getIdHistoricoMarcacaoPonto() {
         return idHistoricoMarcacaoPonto;
     }
 
-    public void setIdHistoricoMarcacaoPonto(Long idHistoricoMarcacaoPonto) {
+    public void setIdHistoricoMarcacaoPonto(int idHistoricoMarcacaoPonto) {
         this.idHistoricoMarcacaoPonto = idHistoricoMarcacaoPonto;
     }
 
-    public Long getIdObra() {
+    public int getIdObra() {
         return idObra;
     }
 
-    public void setIdObra(Long idObra) {
+    public void setIdObra(int idObra) {
         this.idObra = idObra;
     }
     
