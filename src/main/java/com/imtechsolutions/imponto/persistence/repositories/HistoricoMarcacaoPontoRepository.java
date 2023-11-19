@@ -11,15 +11,15 @@ import com.imtechsolutions.imponto.persistence.models.HistoricoMarcacaoPonto;
 import java.util.Date;
 
 public interface HistoricoMarcacaoPontoRepository extends JpaRepository<HistoricoMarcacaoPonto, Long> {
-    @Query("SELECT h FROM HistoricoMarcacaoPonto h WHERE ano(h.ano) = ano(:ano)")
+    @Query("SELECT h FROM HistoricoMarcacaoPonto h WHERE h.anoInclusao = :ano")
     List<HistoricoMarcacaoPonto> findByAnoInclusao(@Param("ano") Date ano);
 
-    @Query("SELECT h FROM HistoricoMarcacaoPonto h WHERE mes(h.mes) = mes(:mes)")
+    @Query("SELECT h FROM HistoricoMarcacaoPonto h WHERE h.mesInclusao = :mes")
     List<HistoricoMarcacaoPonto> findByMesInclusao(@Param("mes") Date mes);
 
-    @Query("SELECT h FROM HistoricoMarcacaoPonto h WHERE dia(h.dia) = dia(:dia)")
-    List<HistoricoMarcacaoPonto> findByDiaInclusao(@Param("dia") Date dia);
+    @Query("SELECT h FROM HistoricoMarcacaoPonto h WHERE h.diaInclusao = :dia")
+    List<HistoricoMarcacaoPonto> findByDiaInclusao(@Param("dia") Date dia);    
 
-    @Query("SELECT h FROM HistoricoMarcacaoPonto h WHERE hora(h.hora) = hora(:hora)")
+    @Query("SELECT h FROM HistoricoMarcacaoPonto h WHERE h.horaInclusao = :hora")
     List<HistoricoMarcacaoPonto> findByHoraInclusao(@Param("hora") Date hora);
 }

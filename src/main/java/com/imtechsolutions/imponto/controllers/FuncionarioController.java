@@ -17,7 +17,7 @@ import com.imtechsolutions.imponto.persistence.models.Funcionario;
 import com.imtechsolutions.imponto.services.FuncionarioService;
 
 @RestController
-@RequestMapping("/cadastro/funcionario")
+@RequestMapping("/funcionario")
 public class FuncionarioController {
 
     @Autowired

@@ -18,7 +18,7 @@ public class Funcionario {
     private int idFuncionario;
 
     @Column(name = "senha")
-    private String senhaFuncionario;
+    private String senha;
 
     // @Id
     // @Column(name = "cpf_funcionario")
@@ -62,12 +62,12 @@ public class Funcionario {
     public void setNomeFuncionario(String nomeFuncionario) {
         this.nomeFuncionario = nomeFuncionario;
     }
-    public String getSenhaFuncionario() {
-        return senhaFuncionario;
+    public String getSenha() {
+        return senha;
     }
     
-    public void setSenhaFuncionario(String senhaFuncionario) {
-        this.senhaFuncionario = senhaFuncionario;
+    public void setSenha(String senha) {
+        this.senha = senha;
     }
 
     // public String getCpfFuncionario() {
