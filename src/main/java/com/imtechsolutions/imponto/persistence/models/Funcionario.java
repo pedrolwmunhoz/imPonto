@@ -20,7 +20,7 @@ public class Funcionario {
     @Column(name = "senha")
     private String senha;
 
-    @Column(name = "nomeFuncionario")
+    @Column(name = "nome_funcionario")
     private String nomeFuncionario;
 
     @Column(name = "id_empresa")
