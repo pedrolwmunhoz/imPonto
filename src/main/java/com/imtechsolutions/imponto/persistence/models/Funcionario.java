@@ -20,29 +20,26 @@ public class Funcionario {
     @Column(name = "senha")
     private String senha;
 
-    // @Id
-    // @Column(name = "cpf_funcionario")
-    // private String cpfFuncionario;
-
     @Column(name = "nomeFuncionario")
     private String nomeFuncionario;
 
     @Column(name = "id_empresa")
-    private int idEmpresa;
+    private Long idEmpresa;
 
     @Column(name = "id_historico_marcacao_ponto")
-    private int idHistoricoMarcacaoPonto;
+    private Long idHistoricoMarcacaoPonto;
 
     @Column(name = "id_obra")
-    private int idObra;
+    private Long idObra;
 
     public Funcionario() {
         // Construtor vazio padrão
     }
 
-    public Funcionario(int idFuncionario, String nomeFuncionario, int idEmpresa, int idHistoricoMarcacaoPonto, int idObra) {
+    public Funcionario(int idFuncionario,String senha, String nomeFuncionario, Long idEmpresa, Long idHistoricoMarcacaoPonto, Long idObra) {
         this.nomeFuncionario = nomeFuncionario;
         this.idEmpresa = idEmpresa;
+        this.senha = senha;
         this.idHistoricoMarcacaoPonto = idHistoricoMarcacaoPonto;
         this.idObra = idObra;
     }
@@ -70,37 +67,28 @@ public class Funcionario {
         this.senha = senha;
     }
 
-    // public String getCpfFuncionario() {
-    //     return cpfFuncionario;
-    // }
-    
-    // public void setCpfFuncionario(String cpfFuncionario) {
-    //     this.cpfFuncionario = cpfFuncionario;
-    // }
-
-    public int getIdEmpresa() {
+    public Long getIdEmpresa() {
         return idEmpresa;
     }
 
-    public void setIdEmpresa(int idEmpresa) {
+    public void setIdEmpresa(Long idEmpresa) {
         this.idEmpresa = idEmpresa;
     }
 
-    public int getIdHistoricoMarcacaoPonto() {
+    public Long getIdHistoricoMarcacaoPonto() {
         return idHistoricoMarcacaoPonto;
     }
 
-    public void setIdHistoricoMarcacaoPonto(int idHistoricoMarcacaoPonto) {
+    public void setIdHistoricoMarcacaoPonto(Long idHistoricoMarcacaoPonto) {
         this.idHistoricoMarcacaoPonto = idHistoricoMarcacaoPonto;
     }
 
-    public int getIdObra() {
+    public Long getIdObra() {
         return idObra;
     }
 
-    public void setIdObra(int idObra) {
+    public void setIdObra(Long idObra) {
         this.idObra = idObra;
     }
-    
-    // Outros métodos, se necessário
+
 }

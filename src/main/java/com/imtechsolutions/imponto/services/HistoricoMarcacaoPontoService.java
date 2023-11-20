@@ -41,8 +41,8 @@ public class HistoricoMarcacaoPontoService {
         Funcionario funcionario = funcionarioService.validarLogin(pontoRequest.getIdFuncionario(), pontoRequest.getSenha());
         if (funcionario != null) {
             // Chame o serviço da obra para buscar a latitude e longitude
-            double latitudeObra = obraService.buscarLatitude(funcionario.getIdObra());
-            double longitudeObra = obraService.buscarLongitude(funcionario.getIdObra());
+            double latitudeObra = obraService.buscarLatitude(funcionario.getIdObra().intValue());
+            double longitudeObra = obraService.buscarLongitude(funcionario.getIdObra().intValue());
     
             // Verifique se a latitude e longitude correspondem à obra
             if (latitudeObra == pontoRequest.getLatitude() && longitudeObra == pontoRequest.getLongitude()) {

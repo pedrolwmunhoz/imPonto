@@ -46,7 +46,6 @@ public class FuncionarioService {
         return null;
     }
     
-
     public List<Funcionario> consultarFuncionarios() {
         return repository.findAll();
     }

@@ -8,34 +8,34 @@ import javax.persistence.Column;
 import javax.persistence.Table;
 import java.util.Date;
 
-@Table(name = "historicoMarcacaodePonto", schema = "impontodb")
+@Table(name = "historico_marcacao_ponto", schema = "impontodb")
 @Entity
 public class HistoricoMarcacaoPonto {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idHistorico")
+    @Column(name = "id_historico")
     private int idHistorico;
 
-    @Column(name = "idFuncionario")
+    @Column(name = "id_funcionario")
     private int idFuncionario;
 
-    @Column(name = "tipoMarcacao")
+    @Column(name = "tipo_marcacao")
     private int tipoMarcacao;
 
-    @Column(name = "dataCompletaInclusao")
+    @Column(name = "data_completa_inclusao")
     private Date dataCompletaInclusao;
 
-    @Column(name = "anoInclusao")
+    @Column(name = "ano_inclusao")
     private Date anoInclusao;
 
-    @Column(name = "mesInclusao")
+    @Column(name = "mes_inclusao")
     private Date mesInclusao;
 
-    @Column(name = "diaInclusao")
+    @Column(name = "dia_inclusao")
     private Date diaInclusao;
 
-    @Column(name = "horaInclusao")
+    @Column(name = "hora_inclusao")
     private Date horaInclusao;
 
     @Column(name = "latitude")
